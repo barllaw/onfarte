@@ -4488,4 +4488,24 @@
 $('.burger').on('click', function () {
   $('.mobile-menu-list').toggleClass('mobile-menu-active');
   $('.burger').toggleClass('burger-active');
+}); // Smooth Scroll Anchor
+
+$('.anchor a').on('click', function (e) {
+  if (this.hash != '') {
+    const hash = this.hash;
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800);
+  }
+}); // Guide product toggle
+
+$('.target-product-btn').on('click', function () {
+  $('.popup-wrap').addClass('popup-wrap-active');
+  $('.popup').addClass('popup-active');
+  $('body').css('overflow', 'hidden');
+});
+$('.close').on('click', function () {
+  $('.popup-wrap').removeClass('popup-wrap-active');
+  $('.popup').removeClass('popup-active');
+  $('body').css('overflow', 'visible');
 });
