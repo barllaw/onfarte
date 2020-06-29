@@ -256,7 +256,7 @@ header {
         font-weight: 200;
         letter-spacing: 1px;
         font-size: 16px; }
-    #contact .contact-wrap .contact-form form button {
+    #contact .contact-wrap .contact-form form .contact-btn {
       border: none;
       border-radius: 15px;
       display: -webkit-box;
@@ -279,7 +279,7 @@ header {
       -webkit-transition: .25s;
       -o-transition: .25s;
       transition: .25s; }
-      #contact .contact-wrap .contact-form form button:hover {
+      #contact .contact-wrap .contact-form form .contact-btn:hover {
         background: orange; }
 
 footer {
@@ -378,6 +378,8 @@ footer {
     #servicespage-content .container .servicespage-items .servicespage-item {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-auto-flow: column;
+      grid-template-rows: auto;
       grid-gap: 20px;
       margin: 50px 0 120px 0;
       font-weight: 200;
