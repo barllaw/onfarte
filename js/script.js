@@ -4483,6 +4483,19 @@
 
     return o;
   };
+}); // ajax form
+
+$(document).ready(function () {
+  $("#form").submit(function () {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function () {
+      alert('Thanks for your order!');
+    });
+    return false;
+  });
 }); // Menu toggle
 
 $('.burger').on('click', function () {
